@@ -1,0 +1,49 @@
+Project: Create a Business Requirements Document
+Project Overview
+In order to assess your learning throughout the course, you will be completing a project in which you will design a business requirements document (BRD) and supporting visual models. You will be given a case study of a business that will provide background information and allow you to answer various questions about a process change.
+
+Overall, this assessment combines your understanding of business requirements gathering, documentation, and visual representation. By applying your knowledge to the provided case study, you will analyze the problem, gather relevant information, and identify specific requirements. The business requirements document and supporting visual models will showcase your ability to propose effective solutions and communicate them.
+
+Ready to get started? 
+
+Project Instructions
+1. Click the 
+project link 
+and select "Make a Copy."
+
+
+2. Once you have made a copy, read through the materials on pages 1-3 to get familiar with the company and the problem it is working to solve. 
+
+3. With the information gathered, fill in this business requirements document template on pages 4-5. You will need to do the following:
+
+Provide a project summary.
+
+Define the business problem.
+
+Identify goals and ways to measure success.
+
+Identify the constraints of the project.
+
+Complete a power/interest grid of the stakeholders.
+
+4. Once you complete the business requirements document, you will need to update the supporting models by editing the existing process flow diagram and business domain model linked in the document. In order to complete these diagrams, you will need to follow these steps:
+
+Select and open the appropriate link: 
+Scrappy Compost Customer Flow Diagram
+ or 
+Scrappy Compost Domain Model
+.
+
+The link will open in a new tab to a Google Drive page. If you are not logged in, select the “Sign in” button and log into your Google account. In the top middle of the screen, click the button that says “Open with diagrams.net.” This will open the diagram in a new tab on diagrams.net.
+
+In the top left corner, click “File,” then “Make a Copy.” Save the file to your Google Drive. If you do not make a copy, you will not be able to edit the diagram.
+
+Edit the diagrams to include the necessary new information. Once you’re finished, take a screenshot of the diagram and paste it in the boxes below.
+
+Once you complete these models, take a screenshot of each model and paste them into the document. 
+
+5. Once all steps are completed, download the document as a PDF by selecting "File" > "Download" > "PDF Document" in the top left corner of the document so you can save your work.
+
+
+Great job! You have completed your first business requirements document and have set up Scrappy Compost for success. 
+
