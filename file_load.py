@@ -1,11 +1,11 @@
 import sqlalchemy
 import pandas as pd
 
-user = #enter user info
-pwd = #enter password
-server #enter server info
+user = 'user'
+pwd = 'pwd'
+server ='server'
 port = '5432'
-db = #enter database info
+db = 'db'
 
 engine = sqlalchemy.create_engine(f'postgresql://{user}:{pwd}@{server}:{port}/{db}')
 
