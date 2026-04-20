@@ -1,0 +1,132 @@
+Misc Python and SQL Queries:
+
+Sparkle Button:
+button:hover .stars {
+	display: block;
+	filter: drop-shadow(0 0 10px
+	#fffdef);
+}
+
+Horizontal Bar Chart for Python
+import termplotlib as tpl
+values = [10, 4, 15, 7]
+labels = ["Java", "C++", "Python", "Go"]
+fig= tpl.figure()
+fig.barh(values, labels)
+fig.show()
+
+Power File Tool: Duplicate Finder
+import os, hashlib
+
+path = input ("Folder: ")
+seen = {}
+
+for f in os.listdir(path):
+	data = open(os.path.join(path, f), "rb").read()
+	h = hashlib.md5(data).hexdigest()
+	if h in seen:
+		print("Duplicate:", f, "<->", seen[h])
+	else:
+		seen[h] = f
+
+Task Scheduling in Python:
+Run a Task every 1 Second:
+import schedule,time
+schedule.every().second.do(lambda:print("Hello"))
+while True:
+	schedule.run_pending()
+	time.sleep(1)
+
+Run a Task every 1 minute:
+import schedule
+def task():
+	print("1 minute passed"
+schedule.every(1).minutes.do(task)
+
+Run a Task every Tuesday
+import schedule
+schedule.every().Tuesday.do(lambda:
+			print("Today is Tuesday"))
+
+Run a task at 5:30pm daily
+import schedule
+schedule.every().day.at("17:30").do(lambda:
+				print("Task at 5:30pm"))
+
+Simple Counter Task
+import schedule,time
+count=0
+def update():
+	global count
+	count+=1
+	print("Count:", count)
+schedule.every(3).seconds.do(update)
+while True:
+	schedule.run_pending()
+	time.sleep(1)
+
+Print Current Time every second
+import schedule,time
+from datetime import datetime
+
+schedule.every(5).seconds.do(lambda: print("Current Time:",
+					  datetime.now()))
+
+while True:
+	schedule.run_pending()
+	time.sleep(1)
+
+Show all scheduled jobs
+import schedule
+schedule.every(2).seconds.do(lambda:None)
+print(schedule.get_jobs())
+
+Cancel a schedule job
+import schedule
+job=schedule.every(1).seconds.do(lambda: print("Task running"))
+schedule.cancel_job(job)
+print("Job cancelled")	
+
+
+Remove duplicates from a list
+nums = [1, 2, 2, 3, 4, 4]
+print(list(set(nums)))
+DO NOT USE IF YOU NEED TO KEEP IN ORDER!
+
+Encrypt & Decrypt Files
+from cryptography.fernet import Fernet
+
+key = fernet.generate_key()
+cipher = fernet(key)
+
+message = b"Sensitive Cybersecurity Data"
+encrypted = cipher.encrypt(message)
+decrypted = cipher.decrypt(encrypted)
+
+print("Encrypted:", encrypted)
+print("Decrypted:", decrypted)
+
+Encrypted: b'gAAAABpkuauj6jHeQ5a2IoUt**kKxZaae0_TM24g='
+Decrypted: b'Sensitive Cybersecurity Data'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
