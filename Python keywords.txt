@@ -1,0 +1,339 @@
+Keyword	Description
+and	A logical operator
+as	To create an alias
+assert	For debugging
+break	To break out of a loop
+class	To define a class
+continue	To continue to the next iteration of a loop
+def	To define a function
+del	To delete an object
+elif	Used in conditional statements, same as else if
+else	Used in conditional statements
+except	Used with exceptions, what to do when an exception occurs
+False	Boolean value, result of comparison operations
+finally	Used with exceptions, a block of code that will be executed no matter if there is an exception or not
+for	To create a for loop
+from	To import specific parts of a module
+global	To declare a global variable
+if	To make a conditional statement
+import	To import a module
+in	To check if a value is present in a list, tuple, etc.
+is	To test if two variables are equal
+lambda	To create an anonymous function
+None	Represents a null value
+nonlocal	To declare a non-local variable
+not	A logical operator
+or	A logical operator
+pass	A null statement, a statement that will do nothing
+raise	To raise an exception
+return	To exit a function and return a value
+True	Boolean value, result of comparison operations
+try	To make a try...except statement
+while	To create a while loop
+with	Used to simplify exception handling
+yield	To return a list of values from a generator
+
+Module 1 Summary: Python Basics
+Congratulations! You have completed this module. At this point, you know that: 
+
+Python can distinguish among data types such as integers, floats, strings, and Booleans.
+
+Integers are whole numbers that can be positive or negative.
+
+Floats include integers as well as decimal numbers between the integers.
+
+You can convert integers to floats using typecasting and vice-versa.
+
+You can convert integers and floats to strings.
+
+You can convert an integer or float value to True (1) or False (0).
+
+Expressions in Python are a combination of values and operations used to produce a single result.
+
+Expressions perform mathematical operations such as addition, subtraction, multiplication, and so on.
+
+We can use // to perform integer division, which results in an integer value by discarding the fractional part.  
+
+Python follows the order of operations (BODMAS) to perform operations with multiple expressions.
+
+Variables store and manipulate data, allowing you to access and modify values throughout your code.
+
+The assignment operator "=" assigns a value to a variable.
+
+":" denotes the value of the variable within the code.
+
+Assigning another value to the same variable overrides the previous value of that variable.
+
+You can perform mathematical operations on variables using the same or different variables.
+
+Modifying the value of one variable will affect other variables only if they reference the same mutable object.  
+
+Python string operations involve manipulating text data using tasks such as indexing, concatenation, slicing, and formatting.
+
+A string is usually written within double quotes or single quotes, including letters, white space, digits, or special characters.
+
+A string attaches to another variable and is an ordered sequence of characters.
+
+Characters in a string identify their index numbers, which can be positive or negative.
+
+We use strings as a sequence to perform sequence operations. 
+
+You can input a stride value to perform slicing while operating on a string.
+
+Operations like finding the length of the string, combining, concatenating, and replicating, result in a new string.
+
+You cannot modify an existing string; they are immutable. 
+
+  You can use escape sequences with a backslash (\) to change the layout of a string.  (For example, \n for a new line, \t for a tab, and \\ for a backslash, etc.)   
+
+In Python, you perform tasks such as searching, modifying, and formatting text data with its pre-built string methods functions.
+
+You apply a method to a string to change its value, resulting in another string. 
+
+You can perform actions such as changing the case of characters in a string, replacing items in a string, finding items in a string, and so on using pre-built string methods.
+
+Module 1 Cheat Sheet: Python Basics
+Package/Method	Description	Code Example
+Comments	Comments are lines of text that are ignored by the Python interpreter when executing the code<./td>	
+1
+# This is a comment
+
+
+Concatenation	Combines (concatenates) strings.	Syntax:
+1
+concatenated_string = string1 + string2 
+
+
+Example:
+
+1
+result = "Hello" + " John"</td>
+
+
+Data Types	- Integer - Float - Boolean - String	Example:
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+x=7 
+# Integer Value 
+y=12.4 
+# Float Value 
+is_valid = True 
+# Boolean Value 
+is_valid = False 
+# Boolean Value 
+F_Name = "John" 
+# String Value
+
+
+Indexing	Accesses character at a specific index.	Example:
+1
+2
+my_string="Hello" 
+char = my_string[0]
+
+
+len()	Returns the length of a string.	Syntax:
+1
+len(string_name) 
+
+
+Example:
+
+1
+2
+my_string="Hello" 
+length = len(my_string)
+
+
+lower()	Converts string to lowercase.	Example:
+1
+2
+my_string="Hello" 
+uppercase_text = my_string.lower()
+
+
+print()	Prints the message or variable inside `()`.	Example:
+1
+2
+print("Hello, world") 
+print(a+b)
+
+
+Python Operators	- Addition (+): Adds two values together.
+- Subtraction (-): Subtracts one value from another.
+- Multiplication (*): Multiplies two values.
+- Division (/): Divides one value by another, returns a float.
+- Floor Division (//): Divides one value by another, returns the quotient as an integer.
+- Modulo (%): Returns the remainder after division.	Example:
+1
+2
+3
+4
+5
+6
+7
+x = 9 y = 4 
+result_add= x + y # Addition 
+result_sub= x - y # Subtraction 
+result_mul= x * y # Multiplication 
+result_div= x / y # Division 
+result_fdiv= x // y # Floor Division 
+result_mod= x % y # Modulo</td>
+
+
+replace()	Replaces substrings.	Example:
+1
+2
+my_string="Hello" 
+new_text = my_string.replace("Hello", "Hi")
+
+
+Slicing	Extracts a portion of the string.	Syntax:
+1
+substring = string_name[start:end] 
+
+
+
+Example:
+
+1
+my_string="Hello" substring = my_string[0:5]
+
+
+
+split()	Splits string into a list based on a delimiter.	Example:
+1
+2
+my_string="Hello" 
+split_text = my_string.split(",")
+
+
+strip()	Removes leading/trailing whitespace.	Example:
+1
+2
+my_string="Hello" 
+trimmed = my_string.strip()
+
+
+upper()	Converts string to uppercase.	Example:
+1
+2
+my_string="Hello" 
+uppercase_text = my_string.upper()
+
+
+Variable Assignment	Assigns a value to a variable.	Syntax:
+1
+variable_name = value 
+
+
+Example:
+
+1
+2
+name="John" # assigning John to variable name 
+x = 5 # assigning 5 to variable x
+
+
+Term	Definition
+AI	AI (artificial intelligence) is the ability of a digital computer or computer-controlled robot to perform tasks commonly associated with intelligent beings.
+Application development	Application development, or app development, is the process of planning, designing, creating, testing, and deploying a software application to perform various business operations.
+Arithmetic Operations	Arithmetic operations are the basic calculations we make in everyday life like addition, subtraction, multiplication and division. It is also called as algebraic operations or mathematical operations.
+Array of numbers	Set of numbers or objects that follow a pattern presented as an arrangement of rows and columns to explain multiplication.
+Assignment operator in Python	Assignment operator is a type of Binary operator that helps in modifying the variable to its left with the use of its value to the right. The symbol used for assignment operator is "=".
+Asterisk	Symbol "* " used to perform various operations in Python.
+Backslash	A backslash is an escape character used in Python strings to indicate that the character immediately following it should be treated in a special way, such as being treated as escaped character or raw string.
+Boolean	Denoting a system of algebraic notation used to represent logical propositions by means of the binary digits 0 (false) and 1 (true).
+Colon	A colon is used to represent an indented block. It is also used to fetch data and index ranges or arrays.
+Concatenate	Link (things) together in a chain or series.
+Data engineering	Data engineers are responsible for turning raw data into information that an organization can understand and use. Their work involves blending, testing, and optimizing data from numerous sources.
+Data science	Data Science is an interdisciplinary field that focuses on extracting knowledge from data sets which are typically huge in amount. The field encompasses analysis, preparing data for analysis, and presenting findings to inform high-level decisions in an organization.
+Data type	Data type refers to the type of value a variable has and what type of mathematical, relational or logical operations can be applied without causing an error.
+Double quote	Symbol “ “ used to represent strings in Python.
+Escape sequence	An escape sequence is two or more characters that often begin with an escape character that tell the computer to perform a function or command.
+Expression	An expression is a combination of operators and operands that is interpreted to produce some other value.
+Float	Python float () function is used to return a floating-point number from a number or a string representation of a numeric value.
+Forward slash	Symbol “/“ used to perform various operation sin Python
+Foundational	Denoting an underlying basis or principle; fundamental.
+Immutable	Immutable Objects are of in-built datatypes like int, float, bool, string, Unicode, and tuple. In simple words, an immutable object can’t be changed after it is created.
+Integer	An integer is the number zero (0), a positive natural number (1, 2, 3, and so on) or a negative integer with a minus sign (−1, −2, −3, and so on.)
+Manipulate	Is the process of modifying a string or creating a new string by making changes to existing strings.
+Mathematical conventions	A mathematical convention is a fact, name, notation, or usage which is generally agreed upon by mathematicians.
+Mathematical expressions	Expressions in math are mathematical statements that have a minimum of two terms containing numbers or variables, or both, connected by an operator in between.
+Mathematical operations	The mathematical “operation” refers to calculating a value using operands and a math operator.
+Negative indexing	Allows you to access elements of a sequence (such as a list, a string, or a tuple) from the end, using negative numbers as indexes.
+Operands	The quantity on which an operation is to be done.
+Operators in Python	Operators are used to perform operations on variables and values.
+Parentheses	Parentheses is used to call an object.
+Replicate	To make an exact copy of.
+Sequence	A sequence is formally defined as a function whose domain is an interval of integers.
+Single quote	Symbol ‘ ‘ used to represent strings in python.
+Slicing in Python	Slicing is used to return a portion from defined list.
+Special characters	A special character is one that is not considered a number or letter. Symbols, accent marks, and punctuation marks are considered special characters.
+Stride value	Stride is the number of bytes from one row of pixels in memory to the next row of pixels in memory.
+Strings	In Python, Strings are arrays of bytes representing Unicode characters.
+Substring	A substring is a sequence of characters that are part of an original string.
+Type casting	The process of converting one data type to another data type is called Typecasting or Type Coercion or Type Conversion.
+Types in Python	Data types are the classification or categorization of data items. It represents the kind of value that tells what operations can be performed on a particular data.
+Variables	Variables are containers for storing data values.
+
+
+ir([])
+Out[10]: 
+['__add__',
+ '__class__',
+ '__class_getitem__',
+ '__contains__',
+ '__delattr__',
+ '__delitem__',
+ '__dir__',
+ '__doc__',
+ '__eq__',
+ '__format__',
+ '__ge__',
+ '__getattribute__',
+ '__getitem__',
+ '__getstate__',
+ '__gt__',
+ '__hash__',
+ '__iadd__',
+ '__imul__',
+ '__init__',
+ '__init_subclass__',
+ '__iter__',
+ '__le__',
+ '__len__',
+ '__lt__',
+ '__mul__',
+ '__ne__',
+ '__new__',
+ '__reduce__',
+ '__reduce_ex__',
+ '__repr__',
+ '__reversed__',
+ '__rmul__',
+ '__setattr__',
+ '__setitem__',
+ '__sizeof__',
+ '__str__',
+ '__subclasshook__',
+ 'append',
+ 'clear',
+ 'copy',
+ 'count',
+ 'extend',
+ 'index',
+ 'insert',
+ 'pop',
+ 'remove',
+ 'reverse',
+ 'sort']
+
