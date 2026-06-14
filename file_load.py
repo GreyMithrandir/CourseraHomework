@@ -4,7 +4,7 @@ import pandas as pd
 user = 'user'
 pwd = 'pwd'
 server ='server'
-port = '5432'
+port = 'port'
 db = 'db'
 
 engine = sqlalchemy.create_engine(f'postgresql://{user}:{pwd}@{server}:{port}/{db}')
