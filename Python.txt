@@ -1,0 +1,396 @@
+Python:
+
+Converting to Boolean in Python
+number to bool
+print(bool(1)) #true
+print(bool(0)) #false
+
+string to bool
+print(bool("Python")) #true
+print(bool("")) #false
+
+list to bool
+print(bool([1, 2, 3])) #true
+print(bool([])) #false
+
+Saving and Loading a Dictionary
+
+import pickle
+
+my_dict = {'name': 'John', 'age': 30, 'city': 'New York'}
+
+with open('dict.pkl', 'wb') as file:	
+	pickle.dump(my_dict, file)
+
+with open('dict.pkl', 'rb') as file:
+	loaded_dict = pickle.load(file)
+
+print("Loaded Dictionary:", loaded_dict)
+
+Result: Loaded Dictionary: {'name': 'John', 'age': 30, 'city': 'New York'}
+
+Pandas Essentials:
+Importing/Exporting
+df.read_csv()- Read a CSV file
+df.read_excel()- Read an Excel file
+df.read_sql()- Read from SQL db
+df.to_csv()- Export DF to CSV
+df.to_excel()- Export DF to Excel
+df.to_json()- Export DF to JSON
+
+Data Cleaning
+df.dropna()-remove missing values
+df.fillna()- Fill in missing values
+df.drop()- drop rows or columns
+df.rename()- Rename columns or index
+df.drop_duplicates()- Remove duplicate rows
+df.isnull().sum()- count nulls per column
+df.replace({'old':'new'})- Replace values
+df.fillna(method='ffill')- Forward fill missing values
+df.rename(columns={'old':'new'})- rename columns
+df.astype({'col':'type'})- change dtype
+df.drop(['col'],axis=1)- drop columns
+df.columns=df.columns.str.strip()- strip whitespace in names
+
+Data Transformation
+df.pivot()- Reshape Data
+df.melt()- Stack from wide to long
+df.concat()- Bind rows together
+df.sort_values()-sort by columns
+df.sort_index()- sort by index
+df.stack()- pivot columns into index
+
+Statistics 
+df.describe()- Summary of stats
+df.mean()- calculate mean
+df.corr()- Correlation matrix
+df.value_counts()-Frequency values
+df.groupby()- group and aggregate 
+
+Setup
+import numpy as np
+import pandas as pd
+app.run()
+
+Plotting
+plt.plot(x,y)- Box Plot
+plt.hist(data)- Histogram
+plt.scatter(x,y)- Scatter Plot
+
+Data Selection
+df['column']-Select a single column
+df.loc['row', 'col']- Looking up Label based items
+df.iloc[0:5, 0:2]- Looking up integer based items
+df.query('col > 5')- SQL like filtering
+df[df['col'].inin(['A', 'B'])]- Searching multiple items
+df.head()- first rows
+df.info()- column dtypes and non-nulls
+
+WebScraper:
+import requests
+import csv
+from bs4 import BeautifulSoup
+
+# Set the URL to scrape
+url= "https://www.example.com"
+
+# Make a request to the website
+response= requests.get(url)
+
+# Parse the HTML of the website
+soup = BeautifulSoup(response.text, "html.parser")
+
+# Find the data you want to extract
+data = soup.find_all("div", {"class": "data"})
+
+# Create a CSV file
+with open("data.csv", "w") as f:
+	# Create a CSV write
+	writer= csv.writer(f)
+
+	# Write the header now
+	writer.writerow(["ID", "Value"])
+
+	# Write the data rows
+	for item in data:
+	id = item.get("id")
+	value = item.text
+	writer.writerow([id,value])
+
+Download a File:
+import requests
+
+url = "https://example.com/file.zip"
+response = requests.get(url)
+with open("file.zip", "wb") as f:
+	f.write(response.content)
+
+Create a table using Python:
+from rich.table import Table
+from rich.console import Console
+
+console = Console()
+table = Table(title="User Data")
+
+table.add_column("ID", justify="right", style="cyan", no_wrap=True)
+table.add_column("Name", style="magenta")
+table.add_column("ID", justify="right", style="green")
+
+table.add_row("1", "Alice", "28")
+table.add_row("2", "Bob", "32")
+table.add_row("3", "Charlie", "22")
+
+console.print(table)
+
+Colored Bar Graph Using Matplotlib in Python:
+import matplotlib.pyplot as plt
+
+categories = ['A', 'B', 'C', 'D', 'E']
+values = [10, 15, 7, 12, 20]
+
+colors = ['red', 'blue', 'green', 'orange', 'purple']
+
+plt.bar(categories, values, color=colors)
+
+plt.xlabel('Categories')
+plt.ylabel('Values')
+plt.title('Colored Bar Graph')
+plt.show()
+
+Python Methods:
+List/Array Methods-
+append()
+clear()
+copy()
+count()
+extend()
+index()
+insert()
+pop()
+remove()
+reverse()
+sort()
+
+String Methonds-
+capitalize()
+casefold()
+center()
+counvt()
+encode()
+endswith()
+expandtabs()
+find()
+format()
+format_map()
+index()
+
+Create Dataset:
+import pandas as pd
+data = {
+	"Name": ["A", "B", "C", "D"],
+	"Marks": [85, 90, 78, 92]
+}
+
+df = pd.DataFrame(data)
+print(df)
+
+Add New Column:
+import pandas as pd
+df["Status"] = df["Marks"].apply(lambda x: "Pass" if x > 80 else "Fail")
+print(df)
+
+Sort Data:
+sorted_df = df.sort_values(by="Marks", ascending=False)
+print(sorted_df)
+
+View Basic Info:
+print(df.info())
+
+Get Summary Statistics:
+print(df.describe())
+
+Visualization(Bar Chart):
+import matplotlib.pylot as plt
+plt.bar(df["Name"], df["Marks"])
+plt.title("Student Marks")
+plt.xlabel("Name")
+plt.ylabel("Marks")
+plt.show()
+
+Pie Chart:
+import matplotlib.pylot as plt
+
+labels = ['Category A', 'Category B', Category C']
+sizes = [30, 45, 25]
+
+plt.pie(sizes, labels=lables, autopct='%1.1f%%')
+plt.title('Pie Chart')
+plt.show()
+
+Line Graph:
+import matplotlib.pylot as plt
+
+plt.plot([1, 3, 2, 5, 4])
+plt.title("Simple Line Graph")
+plt.savefig("line_plot.png")
+plt.show()
+
+DateTime Operations:
+pd.to_datetime(df['date_column'])- Convert to datetime
+df['date_column'].dt.year- Extract year
+df['date_column'].dt.month- Extract month
+df['date_column'].dt.day- Extract day
+df['date_column'].dt.dayofweek- Extract day of the week
+df['date_column'].dt.isocalendar().week- Extract week of the year
+df['date_column'].dt.quarter- Extract quarter
+df['date_column']+pd.timedelta(days=1)- Add time delta
+(df['end_date'] - df['start_date']).dt.days- Calculate time difference
+df.resample('M', on='date_column').mean()- Resample time series
+
+Email Sender:
+import smtplib
+print("Email script ready (setup SMTP to actually send).")
+
+import smtplib
+HOST = "smtp.mydomain.com"
+SUBJECT = "TEST email from Python"
+TO = "mike@mydomain.com
+FROM = "python@mydomain.com"
+text = "blah blah blah"
+BODY = "\r\n".join((
+	f"From: {FROM}",
+	f"To: {TO}",
+	f"Subject: {SUBJECT}",
+	"",
+	text)
+)
+server = smtplib.SMTP(HOST)
+server.sendmail(FROM, [TO], BODY)
+server.quit()
+
+Daily Log Writer:
+with open("daily_log.txt", "a") as f:
+	f.write("Completed Python scripts tasks\n")
+print("Log updated")
+
+Meeting Countdown:
+import datetime
+meeting_time = datetime.datetime.now() + datetime.timedelta(hours=2)
+print("Meeting in:", meeting_time - datetime.datetime.now())
+
+Send a POST Request with Data:
+import requests
+response = requests.post(
+	"https://jsonplaceholder.typicode.com/posts",
+	json={"title": "New Post", "body": "Hello World", "userId": 1}
+)
+print(response.json())
+Response- {'title': 'New Post', 'body': 'Hello World', 'userId': 1, 'id': 101}
+
+Send a GET Request:
+import requests
+response = requests.get("https://jsonplaceholder.typicode.com/post/1")
+print(response.json())
+
+Basic Logging:
+import logging
+
+logging.basicConfig(level=logging.INFO)
+logging.info("Program started")
+
+Response- INFO:root:Program started
+
+Log Levels:
+logging.warning("This is a warning")
+logging.error("This is an error")
+
+Response- WARNING:root:This is a warning
+ERROR:root:This is an error
+
+Log to a file:
+logging.basicConfig(filename="app.log", level=logging.INFO)
+logging.info("Saved to file")
+
+Response- INFO:root:Saved to file
+
+Log Format:
+logging.basicConfig(
+	format="%(asctime)s - %(levelname)s - %(message)s",
+	level=logging.INFO
+)
+logging.info("Formatted log")
+
+Response- INFO:root:Formatted log
+
+Log an Exception:
+try:
+    1 / 0
+except Exception:
+    logging.exception("Something went wrong")
+
+Response- ERROR:root:Something went wrong
+Traceback (most recent call last):
+	File "C:\Users\91748\AppData\Local\Temp\ipykernel_119202,
+	in <module>
+	  1 / 0
+	 ~~^~~
+	ZeroDivisionError: division by zero
+
+Custon Logger:
+logger = logging.getLogger("myapp")
+logger.setLevel(logging.INFO)
+logger.info("Custom logger")
+
+response- INFO:myapp:Custom logger
+
+Measure Execution Time:
+import time
+
+start = time.time()
+time.sleep(1)
+logging.info("Took %.2f sec", time.time() - start)
+
+Response- INFO:root:Took 1.00 sec
+
+Simple Monitoring Loop-
+import time
+
+while True:
+	logging.info("Heartbeat")
+	time.sleep(5)
+Response- INFO:root:Heartbeat
+INFO:root:Heartbeat
+INFO:root:Heartbeat
+INFO:root:Heartbeat
+INFO:root:Heartbeat
+
+Basic While Loop Syntax:
+count = 0
+while count < 5:
+	print("Count:", count)
+	count += 1
+
+Response: Count: 0
+Count: 1
+Count: 2
+Count: 3
+Count: 4
+Explanation- The loop runs as long as the condition (count < 5) is True. Count is incremented by 1 in each iteration, and the loop exits when count equals 5.
+
+
+Making a DataFrame Using Pandas:
+import pandas as pd
+pd.DataFrame(data.get('data'))
+
+
+Tip from Lucas:
+    with cpr_engine.connect() as conn:
+        df = pd.read_sql(
+            text(cpr_sql),
+            conn,
+            params={'start_date': start_date},
+        )
+
+and CAST(tickci."CONFDATE" as DATE) >= :start_date
+and CAST(tickci."CONFDATE" as DATE) >= :end_date
+
